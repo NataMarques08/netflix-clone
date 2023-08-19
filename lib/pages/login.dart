@@ -25,6 +25,32 @@ class _LoginState extends State<Login> {
             Container(
               color: Colors.black.withOpacity(0.9),
             ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(
+                  height: 80,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 200),
+                  child: Image.asset('assets/netflix-logo.png'),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      TextField(
+                        keyboardType: TextInputType.emailAddress,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
