@@ -7,9 +7,22 @@ class AppModule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StartPage(),
+      theme: ThemeData(
+        inputDecorationTheme: const InputDecorationTheme(
+          labelStyle: TextStyle(color: Colors.white),
+          focusedBorder: UnderlineInputBorder(
+            borderSide:
+                BorderSide(style: BorderStyle.solid, color: Colors.white),
+          ),
+          enabledBorder: UnderlineInputBorder(
+            borderSide:
+                BorderSide(color: Colors.white, style: BorderStyle.solid),
+          ),
+        ),
+      ),
+      home: const StartPage(),
     );
   }
 }
